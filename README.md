@@ -1,3 +1,14 @@
+# GIAIC NextJS Milestone 3 Assignment
+
+# Overview
+
+This assignment is an attempt to fulfill the following requirements:
+- Create a dynamic blog with multiple posts using Next.js routing.
+- Implement a comments section using React state.
+
+The assignment implements an 'AboutEducation' blog, describing the different types of institutes and different courses globally taught.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

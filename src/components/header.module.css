@@ -1,0 +1,23 @@
+.header-visible {
+    background-color: #15803d;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+    font-size: large;
+    font-weight: bold;
+}
+
+.header-default {
+    display: none;
+}
+
+.header-item-active {
+    border-bottom: 1px solid white;
+}
+
+@media only screen and (min-width: 640px) {
+    .header-visible {
+        display: none;
+    }
+}
