@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import style from "./header.module.css"
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 
 interface HeaderItem {
     id: number,
@@ -12,7 +11,7 @@ interface HeaderItem {
     className?: string
 };
 
-let headerItems: HeaderItem[] = [{
+const headerItems: HeaderItem[] = [{
     id: 1,
     title: "Home",
     url: "/"
@@ -29,7 +28,7 @@ let headerItems: HeaderItem[] = [{
 export default function Header() {
     const pathname = usePathname();
 
-    for (let item of headerItems) {
+    for (const item of headerItems) {
         if (item.url == pathname)
             item.className = style["header-item-active"];
         else
@@ -37,9 +36,9 @@ export default function Header() {
     }
 
     function toggleVisibility() {
-        let headerItems: HTMLElement | null = document.getElementById('header-items');
+        const headerItems: HTMLElement | null = document.getElementById('header-items');
         if (headerItems) {
-            let currentClass: string = headerItems.className;
+            const currentClass: string = headerItems.className;
             if (currentClass == style["header-visible"])
                 headerItems.className = style["header-default"];
             else

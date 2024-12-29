@@ -16,13 +16,13 @@ interface CardProps {
 export default function Card( params : CardProps) {
     const cardData = params.cardData;
     return(
-        <div className="px-4 py-4 w-full max-w-72 bg-green-900 hover:bg-green-950 text-white rounded-2xl flex flex-col items-center">
-            <Image src={cardData.imageLink} alt={cardData.title} width={288} height={200} className="object-cover"/>
-            <div className="w-full h-28">                
+        <div className="w-full max-w-72 bg-green-900 hover:bg-green-950 text-white rounded-2xl">
+            <Image src={cardData.imageLink} alt={cardData.title} width={288} height={100} className="w-72 h-[150px] object-cover rounded-t-2xl"/>
+            <div className="px-4 py-4 w-full h-40 flex flex-col items-center text-center gap-2">                
                 <h3 className="text-lg">{cardData.title}</h3>
-                <p className="h-8 overflow-y-hidden">{cardData.description}</p>
+                <p className="h-20 overflow-y-hidden">{cardData.description}</p>
+                <button className="px-4 py-2 rounded-md bg-green-700 hover:bg-green-800"><Link href={params.href}>Read More</Link></button>
             </div>
-            <button><Link href={params.href}>Read More</Link></button>
         </div>
     )
 }
